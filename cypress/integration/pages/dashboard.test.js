@@ -30,8 +30,8 @@ describe('Dashboard', () => {
 
   it('logs the user in and shows the dashboard and does basic checks around the UI', () => {
     cy.get('body').within(() => {
-      cy.get('div').should('contain.text', 'karl'); // username in the sidebar
-      cy.get('div').should('contain.text', 'Karl Hadwen'); // full name in the sidebar
+      cy.get('div').should('contain.text', 'adrian'); // username in the sidebar
+      cy.get('div').should('contain.text', 'adrian camillo'); // full name in the sidebar
       cy.get('div').should('contain.text', 'Suggestions for you'); // if user has suggestions
     });
   });

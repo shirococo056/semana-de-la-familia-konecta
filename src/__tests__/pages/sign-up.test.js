@@ -47,25 +47,25 @@ describe('<SignUp />', () => {
     await act(async () => {
       doesUsernameExist.mockImplementation(() => Promise.resolve(true)); // as true but inverse in the code
 
-      await fireEvent.change(getByPlaceholderText('Username'), { target: { value: 'karl' } });
+      await fireEvent.change(getByPlaceholderText('Username'), { target: { value: 'adrian' } });
       await fireEvent.change(getByPlaceholderText('Full name'), {
-        target: { value: 'Karl Hadwen' }
+        target: { value: 'adrian camillo' }
       });
       await fireEvent.change(getByPlaceholderText('Email address'), {
-        target: { value: 'karl@gmail.com' }
+        target: { value: 'adrian@gmail.com' }
       });
       await fireEvent.change(getByPlaceholderText('Password'), { target: { value: 'password' } });
       fireEvent.submit(getByTestId('sign-up'));
 
       expect(document.title).toEqual('Sign Up - Instagram');
       await expect(doesUsernameExist).toHaveBeenCalled();
-      await expect(doesUsernameExist).toHaveBeenCalledWith('karl');
+      await expect(doesUsernameExist).toHaveBeenCalledWith('adrian');
 
       await waitFor(() => {
         expect(mockHistoryPush).toHaveBeenCalledWith(ROUTES.DASHBOARD);
-        expect(getByPlaceholderText('Username').value).toBe('karl');
-        expect(getByPlaceholderText('Full name').value).toBe('Karl Hadwen');
-        expect(getByPlaceholderText('Email address').value).toBe('karl@gmail.com');
+        expect(getByPlaceholderText('Username').value).toBe('adrian');
+        expect(getByPlaceholderText('Full name').value).toBe('adrian camillo');
+        expect(getByPlaceholderText('Email address').value).toBe('adrian@gmail.com');
         expect(getByPlaceholderText('Password').value).toBe('password');
         expect(queryByTestId('error')).toBeFalsy();
       });
@@ -94,19 +94,19 @@ describe('<SignUp />', () => {
     await act(async () => {
       doesUsernameExist.mockImplementation(() => Promise.resolve([false])); // as true but inverse in the code
 
-      await fireEvent.change(getByPlaceholderText('Username'), { target: { value: 'karl' } });
+      await fireEvent.change(getByPlaceholderText('Username'), { target: { value: 'adrian' } });
       await fireEvent.change(getByPlaceholderText('Full name'), {
-        target: { value: 'Karl Hadwen' }
+        target: { value: 'adrian camillo' }
       });
       await fireEvent.change(getByPlaceholderText('Email address'), {
-        target: { value: 'karl@gmail.com' }
+        target: { value: 'camilloadrian.u@gmail.com' }
       });
       await fireEvent.change(getByPlaceholderText('Password'), { target: { value: 'password' } });
       fireEvent.submit(getByTestId('sign-up'));
 
       expect(document.title).toEqual('Sign Up - Instagram');
       await expect(doesUsernameExist).toHaveBeenCalled();
-      await expect(doesUsernameExist).toHaveBeenCalledWith('karl');
+      await expect(doesUsernameExist).toHaveBeenCalledWith('adrian');
 
       await waitFor(() => {
         expect(mockHistoryPush).not.toHaveBeenCalledWith(ROUTES.DASHBOARD);
@@ -141,19 +141,19 @@ describe('<SignUp />', () => {
     await act(async () => {
       doesUsernameExist.mockImplementation(() => Promise.resolve(false)); // as true but inverse in the code
 
-      await fireEvent.change(getByPlaceholderText('Username'), { target: { value: 'karl' } });
+      await fireEvent.change(getByPlaceholderText('Username'), { target: { value: 'adrian' } });
       await fireEvent.change(getByPlaceholderText('Full name'), {
-        target: { value: 'Karl Hadwen' }
+        target: { value: 'adrian camillo' }
       });
       await fireEvent.change(getByPlaceholderText('Email address'), {
-        target: { value: 'karl@gmail.com' }
+        target: { value: 'camilloadrian.u@gmail.com' }
       });
       await fireEvent.change(getByPlaceholderText('Password'), { target: { value: 'password' } });
       fireEvent.submit(getByTestId('sign-up'));
 
       expect(document.title).toEqual('Sign Up - Instagram');
       await expect(doesUsernameExist).toHaveBeenCalled();
-      await expect(doesUsernameExist).toHaveBeenCalledWith('karl');
+      await expect(doesUsernameExist).toHaveBeenCalledWith('adrian');
 
       await waitFor(() => {
         expect(mockHistoryPush).not.toHaveBeenCalledWith(ROUTES.DASHBOARD);

@@ -57,7 +57,7 @@ describe('<Profile />', () => {
               value={{
                 user: {
                   uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                  displayName: 'karl'
+                  displayName: 'adrian'
                 }
               }}
             >
@@ -72,8 +72,8 @@ describe('<Profile />', () => {
         expect(getUserByUsername).toHaveBeenCalled();
         expect(getUserByUsername).toHaveBeenCalledWith('orwell');
         expect(getByTitle('Sign Out')).toBeTruthy();
-        expect(getByText('karl')).toBeTruthy();
-        expect(getByText('Karl Hadwen')).toBeTruthy();
+        expect(getByText('adrian')).toBeTruthy();
+        expect(getByText('adrian camillo')).toBeTruthy();
 
         screen.getByText((content, node) => {
           const hasText = (node) => node.textContent === '5 photos';
@@ -129,7 +129,7 @@ describe('<Profile />', () => {
               value={{
                 user: {
                   uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                  displayName: 'karl'
+                  displayName: 'adrian'
                 }
               }}
             >
@@ -144,8 +144,8 @@ describe('<Profile />', () => {
         expect(getUserByUsername).toHaveBeenCalled();
         expect(getUserByUsername).toHaveBeenCalledWith('orwell');
         expect(getByTitle('Sign Out')).toBeTruthy();
-        expect(getByText('karl')).toBeTruthy();
-        expect(getByText('Karl Hadwen')).toBeTruthy();
+        expect(getByText('adrian')).toBeTruthy();
+        expect(getByText('adrian camillo')).toBeTruthy();
       });
     });
   });
@@ -175,7 +175,7 @@ describe('<Profile />', () => {
               value={{
                 user: {
                   uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                  displayName: 'karl'
+                  displayName: 'adrian'
                 }
               }}
             >
@@ -223,7 +223,7 @@ describe('<Profile />', () => {
               value={{
                 user: {
                   uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                  displayName: 'karl'
+                  displayName: 'adrian'
                 }
               }}
             >
@@ -257,7 +257,7 @@ describe('<Profile />', () => {
             <UserContext.Provider
               value={{
                 uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                displayName: 'karl'
+                displayName: 'adrian'
               }}
             >
               <Profile />

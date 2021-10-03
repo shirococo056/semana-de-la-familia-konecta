@@ -39,18 +39,18 @@ describe('<Login />', () => {
 
     await act(async () => {
       await fireEvent.change(getByPlaceholderText('Email address'), {
-        target: { value: 'karl@gmail.com' }
+        target: { value: '' }
       });
       await fireEvent.change(getByPlaceholderText('Password'), { target: { value: 'password' } });
       fireEvent.submit(getByTestId('login'));
 
       expect(document.title).toEqual('Login - Instagram');
       expect(succeededToLogin).toHaveBeenCalled();
-      expect(succeededToLogin).toHaveBeenCalledWith('karl@gmail.com', 'password');
+      expect(succeededToLogin).toHaveBeenCalledWith('', 'password');
 
       await waitFor(() => {
         expect(mockHistoryPush).toHaveBeenCalledWith(ROUTES.DASHBOARD);
-        expect(getByPlaceholderText('Email address').value).toBe('karl@gmail.com');
+        expect(getByPlaceholderText('Email address').value).toBe('camilloadrian.u@gmail.com');
         expect(getByPlaceholderText('Password').value).toBe('password');
         expect(queryByTestId('error')).toBeFalsy();
       });
@@ -75,14 +75,14 @@ describe('<Login />', () => {
 
     await act(async () => {
       await fireEvent.change(getByPlaceholderText('Email address'), {
-        target: { value: 'karl.com' }
+        target: { value: 'adrian.com' }
       });
       await fireEvent.change(getByPlaceholderText('Password'), { target: { value: 'password' } });
       fireEvent.submit(getByTestId('login'));
 
       expect(document.title).toEqual('Login - Instagram');
       expect(failToLogin).toHaveBeenCalled();
-      expect(failToLogin).toHaveBeenCalledWith('karl.com', 'password');
+      expect(failToLogin).toHaveBeenCalledWith('adrian.com', 'password');
       expect(failToLogin).rejects.toThrow('Cannot sign in');
 
       await waitFor(() => {

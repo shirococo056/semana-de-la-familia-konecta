@@ -4,13 +4,13 @@ import 'firebase/auth';
 
 // replace these with your own config values from Firebase!
 const config = {
-  apiKey: 'AIzaSyCAw3yXjcam7HJaS0ThALIMoZ_ICUR9V1k',
-  authDomain: 'insta-536de.firebaseapp.com',
-  projectId: 'insta-536de',
-  storageBucket: 'insta-536de.appspot.com',
-  messagingSenderId: '859496964055',
-  measurementId: 'G-G7FFWSY76Y',
-  appId: '1:859496964055:web:897146ee34dd2ded3a3592'
+  apiKey: 'AIzaSyCFHuM-dhUN45L2yCWE-Z8L6aWryPk098A',
+  authDomain: 'konecta-instagram.firebaseapp.com',
+  projectId: 'konecta-instagram',
+  storageBucket: 'konecta-instagram.appspot.com',
+  messagingSenderId: '670817656287',
+  measurementId: 'G-HC0D29WZKG',
+  appId: '1:670817656287:web:a9bee5a4251033a7a9f86a'
 };
 
 const firebase = Firebase.initializeApp(config);

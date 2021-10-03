@@ -65,7 +65,7 @@ describe('<Dashboard />', () => {
               value={{
                 user: {
                   uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                  displayName: 'karl'
+                  displayName: 'adrian'
                 }
               }}
             >
@@ -73,7 +73,7 @@ describe('<Dashboard />', () => {
                 <Dashboard
                   user={{
                     uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                    displayName: 'karl'
+                    displayName: 'adrian'
                   }}
                 />
               </LoggedInUserContext.Provider>
@@ -87,7 +87,7 @@ describe('<Dashboard />', () => {
         expect(getByTitle('Sign Out')).toBeTruthy();
         expect(getAllByText('raphael')).toBeTruthy();
         expect(getAllByAltText('Instagram')).toBeTruthy(); // instagram logo
-        expect(getByAltText('karl profile')).toBeTruthy();
+        expect(getByAltText('adrian profile')).toBeTruthy();
         expect(getAllByText('Saint George and the Dragon')).toBeTruthy(); // caption for the img
         expect(getByText('Suggestions for you')).toBeTruthy(); // suggestions exist
 
@@ -141,7 +141,7 @@ describe('<Dashboard />', () => {
               value={{
                 user: {
                   uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                  displayName: 'karl'
+                  displayName: 'adrian'
                 }
               }}
             >
@@ -149,7 +149,7 @@ describe('<Dashboard />', () => {
                 <Dashboard
                   user={{
                     uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                    displayName: 'karl'
+                    displayName: 'adrian'
                   }}
                 />
               </LoggedInUserContext.Provider>
@@ -192,7 +192,7 @@ describe('<Dashboard />', () => {
               value={{
                 user: {
                   uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                  displayName: 'karl'
+                  displayName: 'adrian'
                 }
               }}
             >
@@ -200,7 +200,7 @@ describe('<Dashboard />', () => {
                 <Dashboard
                   user={{
                     uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                    displayName: 'karl'
+                    displayName: 'adrian'
                   }}
                 />
               </LoggedInUserContext.Provider>
