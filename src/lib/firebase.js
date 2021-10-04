@@ -1,6 +1,7 @@
 import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import 'firebase/storage';
 
 // replace these with your own config values from Firebase!
 const config = {
