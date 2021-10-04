@@ -55,8 +55,8 @@ export default function Header({
         ) : (
           <img
             className="rounded-full h-16 w-16 md:h-20 lg:h-40 md:w-20 lg:w-40 flex"
-            alt={`adrian camillo's profile picture`}
-            src="/images/avatars/adrian.jpg"
+            alt={`${profileUsername} profile picture`}
+            src={`/images/avatars/${profileUsername}.jpg`}
           />
         )}
       </div>
