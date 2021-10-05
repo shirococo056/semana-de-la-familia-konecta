@@ -55,8 +55,8 @@ export default function Header({
         ) : (
           <img
             className="rounded-full h-16 w-16 md:h-20 lg:h-40 md:w-20 lg:w-40 flex"
-            alt={`${profileUsername} profile picture`}
-            src={`/images/avatars/${profileUsername}.jpg`}
+            alt={`adrian camillo's profile picture`}
+            src="/images/avatars/adrian.jpg"
           />
         )}
       </div>
@@ -104,7 +104,10 @@ export default function Header({
     </div>
   );
 }
-
+<form action="" id="uploader ">
+  <imput type="file" name="file" id="file" />
+  <button type="submit">subir archivo</button>
+</form>;
 Header.propTypes = {
   photosCount: PropTypes.number.isRequired,
   followerCount: PropTypes.number.isRequired,
