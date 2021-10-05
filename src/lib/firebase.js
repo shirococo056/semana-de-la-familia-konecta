@@ -14,13 +14,6 @@ const config = {
   measurementId: 'G-HC0D29WZKG',
   appId: '1:670817656287:web:a9bee5a4251033a7a9f86a'
 };
-let form = document.querySelector('#uploader');
-form.addEventListener('submit', (ev) => {
-  ev.preventDefault();
-  let fileInput = form.querySelector('#file');
-  // eslint-disable-next-line no-unused-vars
-  let file = fileInput.files(0);
-});
 const firebase = Firebase.initializeApp(config);
 const { FieldValue } = Firebase.firestore;
 
