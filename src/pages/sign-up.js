@@ -12,6 +12,7 @@ export default function SignUp() {
   const [fullName, setFullName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
+  const [DNI, setDNI] = useState('');
 
   const [error, setError] = useState('');
   const isInvalid = password === '' || emailAddress === '';
@@ -58,12 +59,13 @@ export default function SignUp() {
       setFullName('');
       setEmailAddress('');
       setPassword('');
+      setDNI('');
       setError('That username is already taken, please try another.');
     }
   };
 
   useEffect(() => {
-    document.title = 'Sign Up - Instagram';
+    document.title = 'Sign Up';
   }, []);
 
   return (
@@ -71,7 +73,7 @@ export default function SignUp() {
       <div className="hidden lg:flex w-full lg:w-3/5">
         <img
           src="/images/iphone-with-profile.jpg"
-          alt="iPhone with Instagram app"
+          alt="imagen semana de la familia"
           className="object-scale-down"
         />
       </div>
@@ -96,6 +98,7 @@ export default function SignUp() {
               onChange={({ target }) => setUsername(target.value)}
               value={username}
             />
+
             <input
               aria-label="Enter your full name"
               type="text"
@@ -119,6 +122,14 @@ export default function SignUp() {
               className="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-primary rounded mb-2"
               onChange={({ target }) => setPassword(target.value)}
               value={password}
+            />
+            <input
+              aria-label="Enter your DNI"
+              type="number"
+              placeholder="DNI"
+              className="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-primary rounded mb-2"
+              onChange={({ target }) => setDNI(target.value)}
+              value={DNI}
             />
             <button
               disabled={isInvalid}
