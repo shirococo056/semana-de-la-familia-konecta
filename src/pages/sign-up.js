@@ -69,10 +69,7 @@ export default function SignUp() {
   }, []);
 
   return (
-    <div
-      className="container flex mx-auto max-w-screen-md items-center h-screen px-4 lg:px-0"
-      background-image:src="/images/fondo.png"
-    >
+    <div className="container flex mx-auto max-w-screen-md items-center h-screen px-4 lg:px-0">
       <div className="flex flex-col w-full lg:w-2/5 justify-center h-full max-w-md m-auto">
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
           <h1 className="flex justify-center w-full">
