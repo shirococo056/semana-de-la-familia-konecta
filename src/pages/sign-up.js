@@ -80,7 +80,7 @@ export default function SignUp() {
       <div className="flex flex-col w-full lg:w-2/5 justify-center h-full max-w-md m-auto">
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
           <h1 className="flex justify-center w-full">
-            <img src="/images/logo.png" alt="Instagram" className="mt-2 mb-4 object-scale-down" />
+            <img src="public\images\logo.png" alt="Instagram" className="mt-2 mb-4 object-scale-down" />
           </h1>
 
           {error && (
