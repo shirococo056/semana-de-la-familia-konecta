@@ -27,7 +27,7 @@ export default function Login() {
   };
 
   useEffect(() => {
-    document.title = 'Login - Instagram';
+    document.title = 'Login - konecta';
   }, []);
 
   return (
@@ -38,7 +38,7 @@ export default function Login() {
       <div className="flex flex-col w-full lg:w-2/5 justify-center h-full max-w-md m-auto">
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
           <h1 className="flex justify-center w-full">
-            <img src="public\images\logo.png" alt="Instagram" className="mt-2 mb-4" />
+            <img src="public\images\logo.png" alt="Semana de la familia" className="mt-2 mb-4" />
           </h1>
 
           {error && (

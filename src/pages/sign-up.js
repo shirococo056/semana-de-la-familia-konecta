@@ -82,7 +82,7 @@ export default function SignUp() {
           <h1 className="flex justify-center w-full">
             <img
               src="public\images\logo.png"
-              alt="Instagram"
+              alt="Semana de la familia"
               className="mt-2 mb-4 object-scale-down"
             />
           </h1>
