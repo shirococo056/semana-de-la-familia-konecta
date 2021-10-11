@@ -39,7 +39,7 @@ export default function Login() {
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
           <h1 className="flex justify-center w-full">
             <a href="https://subefotos.com/ver/?d0cbec6261e49a35106fe248c45a556do.png">
-              <img src="/carpeta/archivo.png" alt="" />
+            <img src="/images/logo.png" alt="Semana de la familia" />
             </a>
           </h1>
 

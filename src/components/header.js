@@ -20,7 +20,7 @@ export default function Header() {
             <h1 className="flex justify-center w-full">
               <Link to={ROUTES.DASHBOARD} aria-label="semana de la familia logo">
                 <a href="https://subefotos.com/ver/?d0cbec6261e49a35106fe248c45a556do.png">
-                  <img src="/carpeta/archivo.png" alt="" />
+                <img src="/images/logo.png" alt="Semana de la familia" />
                 </a>
               </Link>
             </h1>
