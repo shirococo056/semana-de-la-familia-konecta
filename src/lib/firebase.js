@@ -23,6 +23,7 @@ const { FieldValue } = Firebase.firestore;
 seedDatabase(firebase);
 // Initialize Firebase
 const app = initializeApp(config);
+// eslint-disable-next-line no-unused-vars
 const analytics = getAnalytics(app);
 
 export { app, firebase, FieldValue };
