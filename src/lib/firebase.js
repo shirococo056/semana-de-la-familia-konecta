@@ -17,13 +17,11 @@ const config = {
   measurementId: 'G-HC0D29WZKG',
   appId: '1:670817656287:web:a9bee5a4251033a7a9f86a'
 };
-const firebase = Firebase.initializeApp(config);
-const { FieldValue } = Firebase.firestore;
+export const firebase = Firebase.initializeApp(config);
+export const { FieldValue } = Firebase.firestore;
 
 seedDatabase(firebase);
 // Initialize Firebase
-const app = initializeApp(config);
+export const app = initializeApp(config);
 // eslint-disable-next-line no-unused-vars
-const analytics = getAnalytics(app);
-
-export { app, firebase, FieldValue };
+export const analytics = getAnalytics(app);
