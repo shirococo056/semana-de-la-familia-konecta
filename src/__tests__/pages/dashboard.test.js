@@ -35,52 +35,46 @@ describe('<Dashboard />', () => {
       getSuggestedProfiles.mockImplementation(() => suggestedProfilesFixture);
       useUser.mockImplementation(() => ({ user: userFixture }));
 
-      const {
-        getByText,
-        getByAltText,
-        getByTitle,
-        getAllByText,
-        getAllByAltText,
-        getByTestId
-      } = render(
-        <Router>
-          <FirebaseContext.Provider
-            value={{
-              firebase: {
-                firestore: jest.fn(() => ({
-                  collection: jest.fn(() => ({
-                    doc: jest.fn(() => ({
-                      update: jest.fn(() => Promise.resolve('User added'))
+      const { getByText, getByAltText, getByTitle, getAllByText, getAllByAltText, getByTestId } =
+        render(
+          <Router>
+            <FirebaseContext.Provider
+              value={{
+                firebase: {
+                  firestore: jest.fn(() => ({
+                    collection: jest.fn(() => ({
+                      doc: jest.fn(() => ({
+                        update: jest.fn(() => Promise.resolve('User added'))
+                      }))
                     }))
                   }))
-                }))
-              },
-              FieldValue: {
-                arrayUnion: jest.fn(),
-                arrayRemove: jest.fn()
-              }
-            }}
-          >
-            <UserContext.Provider
-              value={{
-                user: {
-                  uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
-                  displayName: 'adrian'
+                },
+                FieldValue: {
+                  arrayUnion: jest.fn(),
+                  arrayRemove: jest.fn()
                 }
               }}
             >
-              <LoggedInUserContext.Provider value={{ user: userFixture }}>
-                <Dashboard
-                  user={{
+              <UserContext.Provider
+                value={{
+                  user: {
                     uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
                     displayName: 'adrian'
-                  }}
-                />
-              </LoggedInUserContext.Provider>
-            </UserContext.Provider>
-          </FirebaseContext.Provider>
-        </Router>
-      );
+                  }
+                }}
+              >
+                <LoggedInUserContext.Provider value={{ user: userFixture }}>
+                  <Dashboard
+                    user={{
+                      uid: 'NvPY9M9MzFTARQ6M816YAzDJxZ72',
+                      displayName: 'adrian'
+                    }}
+                  />
+                </LoggedInUserContext.Provider>
+              </UserContext.Provider>
+            </FirebaseContext.Provider>
+          </Router>
+        );
 
       await waitFor(() => {
         expect(document.title).toEqual('Instagram');
