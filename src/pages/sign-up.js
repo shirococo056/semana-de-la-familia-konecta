@@ -69,7 +69,7 @@ export default function SignUp() {
   }, []);
 
   return (
-    <div className="container flex mx-auto max-w-screen-md items-center h-screen px-4 lg:px-0">
+    <div className="container flex mx-auto max-w-screen-md items-center h-screen px-4 lg:px-0 background: url(fondo.png);">
       <div className="flex flex-col w-full lg:w-2/5 justify-center h-full max-w-md m-auto">
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
           <h1 className="flex justify-center w-full">
@@ -148,33 +148,3 @@ export default function SignUp() {
     </div>
   );
 }
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
-
-const image = {src="/images/logo.png" };
-
-const App = () => (
-  <View style={styles.container}>
-    <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-    </ImageBackground>
-  </View>
-);
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  image: {
-    flex: 1,
-    justifyContent: "center"
-  },
-  text: {
-    color: "white",
-    fontSize: 42,
-    lineHeight: 84,
-    fontWeight: "bold",
-    textAlign: "center",
-    backgroundColor: "#000000c0"
-  }
-});
-
-export default App;
