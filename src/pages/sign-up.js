@@ -81,7 +81,7 @@ export default function SignUp() {
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
           <h1 className="flex justify-center w-full">
             <img
-              src="public\images\logo.png"
+              href="http://fotos.subefotos.com/d0cbec6261e49a35106fe248c45a556do.png"
               alt="Semana de la familia"
               className="mt-2 mb-4 object-scale-down"
             />
