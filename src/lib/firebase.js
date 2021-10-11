@@ -1,10 +1,6 @@
-/* eslint-disable prefer-const */
-import { initializeApp, Firebase } from 'firebase/app';
+import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import 'firebase/storage';
-import { getAnalytics } from 'firebase/analytics';
-import { seedDatabase } from '../seed';
 
 // replace these with your own config values from Firebase!
 const config = {
@@ -17,11 +13,8 @@ const config = {
   measurementId: 'G-HC0D29WZKG',
   appId: '1:670817656287:web:a9bee5a4251033a7a9f86a'
 };
-export const firebase = Firebase.initializeApp(config);
-export const { FieldValue } = Firebase.firestore;
 
-seedDatabase(firebase);
-// Initialize Firebase
-export const app = initializeApp(config);
-// eslint-disable-next-line no-unused-vars
-export const analytics = getAnalytics(app);
+const firebase = Firebase.initializeApp(config);
+const { FieldValue } = Firebase.firestore;
+
+export { firebase, FieldValue };
