@@ -19,11 +19,9 @@ export default function Header() {
           <div className="text-gray-700 text-center flex items-center align-items cursor-pointer">
             <h1 className="flex justify-center w-full">
               <Link to={ROUTES.DASHBOARD} aria-label="semana de la familia logo">
-                <img
-                  href="http://fotos.subefotos.com/d0cbec6261e49a35106fe248c45a556do.png"
-                  alt="Semana de la familia"
-                  className="mt-2 w-6/12"
-                />
+                <a href="https://subefotos.com/ver/?d0cbec6261e49a35106fe248c45a556do.png">
+                  <img src="/carpeta/archivo.png" alt="" />
+                </a>
               </Link>
             </h1>
           </div>
